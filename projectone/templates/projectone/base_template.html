@@ -29,9 +29,24 @@
           </nav>
       </div>
     </div>
+    <div>
+      <a href="accounts/login"> login </a>
+      <a href="accounts/logout"> logout </a>
+    </div>  
   </header>
 <div class="wrapper container">
 {% block content %}
+<ul class="sidebar-nav">
+
+    ...
+
+   {% if user.is_authenticated %}
+     <li>User: {{ user.get_username }}</li>
+     <li><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>   
+   {% else %}
+     <li><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>   
+   {% endif %} 
+  </ul>
 {% endblock %}
 </div>
 
