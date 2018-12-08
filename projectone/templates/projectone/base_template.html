@@ -16,14 +16,16 @@
   <header class="container">
     <div class="row justify-content-between">
       <div class="col-4">
-        <img class="logo" src="/static/images/review.png">
+        <a href="/" ><img class="logo" src="/static/images/review.png"> </a>
       </div>
       <div class="col-4">
         <nav class="nav nav-pills flex-column flex-sm-row">
           <a class="flex-sm-fill text-sm-center" href="/posts_list">Posts list</a>
-          <a class="flex-sm-fill text-sm-center" href="/">home</a>
           <a class="flex-sm-fill text-sm-center" href="#">XXX</a>
           <a class="flex-sm-fill text-sm-center" href="/base">base</a>
+          {% if user.is_authenticated %}
+          <a class="flex-sm-fill text-sm-center" href="{% url 'post_new' %}">new post </a>
+          {% endif %}
           </nav>
       </div>
     </div>

@@ -1,14 +1,16 @@
 {% extends 'projectone/base_template.html' %}
 
 {% block content %}
-    <div>
+    <div class="post">
         {% if post.published_date %}
-            <div >
+            <div class="date">
                 {{ post.published_date }}
             </div>
         {% endif %}
+        {% if user.is_authenticated %}
+        <a href="{% url 'post_edit' pk=post.pk %}"> Изменить</a>
+        {% endif %}
         <h1>{{ post.title }}</h1>
-        <p>{{ post.author }}</p>
         <p>{{ post.text|linebreaksbr }}</p>
     </div>
 {% endblock %}
