@@ -1,34 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Posts list</title>
-  <meta charset="utf-8">
-  
-  <script type="123" src="/static/js/bootstrap.js"></script>
-  <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css">
-  <link rel="stylesheet" type="text/css" href="/static/css/bootstrap-reboot.css">
-  <link href="/static/css/style.css" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-</head>
-<body>
-  <header class="container">
-    <div class="row justify-content-between">
-      <div class="col-4">
-        <img class="logo" src="/static/images/review.png">
-      </div>
-      <div class="col-4">
-        <nav class="nav nav-pills flex-column flex-sm-row">
-          <a class="flex-sm-fill text-sm-center" href="/posts_list">Posts list</a>
-          <a class="flex-sm-fill text-sm-center" href="/">home</a>
-          <a class="flex-sm-fill text-sm-center" href="#">XXX</a>
-          <a class="flex-sm-fill text-sm-center" href="/base">base</a>
-          </nav>
-      </div>
-    </div>
-  </header>
-<div class="wrapper container">
+{% extends 'base_template/base_template.html' %}
+{% block content %}
   {% for post in posts %}
     <div>
         <p>published: {{ post.published_date }}</p>
@@ -36,9 +7,4 @@
         <p>{{ post.text|linebreaksbr }}</p>
     </div>
 {% endfor %}
-</div>
-
-
-
-</body>
-</html>
+{% endblock %}
