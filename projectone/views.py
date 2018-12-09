@@ -4,6 +4,7 @@ from .models import Post
 from .forms import PostForm
 
 
+
 def index(request):
     return render(request, 'projectone/index.html', {})
 
