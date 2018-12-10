@@ -1,8 +1,4 @@
 
-body {
-	
-}
-
 .logo{
 	width: 130px;
 	height: 65px;
@@ -10,13 +6,19 @@ body {
 
 .wrapper {
 	padding-top: 80px;
-	height: ;
 	width: 1080px;
 }
 
+.btn{
+	padding: 0px;
+	margin-right: 10px;
+  font-size: 15px;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
 
 header {
-	padding-top: 100px;
+	padding-top: 500px;
 	width: 1080px;
 	height: 100px;
 }
