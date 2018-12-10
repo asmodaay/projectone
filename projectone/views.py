@@ -12,8 +12,8 @@ def posts_list(request):
 	posts = Post.objects.all()
 	return render(request, 'projectone/posts_list.html', {'posts': posts})
 
-def base_template(request):
-	return render(request, 'projectone/base_template.html', {})
+def base(request):
+	return render(request, 'base.html', {})
 
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
