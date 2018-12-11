@@ -28,7 +28,7 @@
           <a class="nav-header flex-sm-fill text-sm-center" href="posts_list">Post list</a>
           <a class="nav-header flex-sm-fill text-sm-center" href="/">home</a>
           {% if user.is_anonymous %}
-          <a href="/accounts/login" class="btn-sm nav-header flex-sm-fill text-sm-center btn btn-primary">Login</a>
+          <a href="/accounts/login" class="btn-sm nav-header flex-sm-fill text-sm-center btn btn1 btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Login</a>
           <a href="/accounts/signup" class="btn-sm nav-header flex-sm-fill text-sm-center btn btn-primary">SignUp</a>
           {% endif %}
           {% if user.is_authenticated %}
