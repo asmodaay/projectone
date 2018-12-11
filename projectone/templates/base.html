@@ -1,4 +1,8 @@
 {% load static %}
+
+{% load i18n %}
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,9 +39,6 @@
       </div>
     </div>
   </header>
-<<<<<<< HEAD
-=======
-
 
    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
        <div class="modal-dialog modal-dialog-centered" role="document">
@@ -50,19 +51,15 @@
           </div>
               <div class="modal-body">
                 <form class="login" method="POST" action="{% url 'account_login' %}">
-                  <div class="form-group">
-                    <label for="Email">Account Name</label>
-                    <input type="text" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Enter email">
-                  </div>
-                  <div class="form-group">
-                    <label for="Password">Password</label>
-                    <input type="password" class="form-control" id="Password" placeholder="Password">
-                  </div>
-                  <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" id="Check">
-                    <label class="form-check-label" for="Check">Check me out</label>
-                  </div>
-                </form>
+                {% csrf_token %}
+                {{ form.as_p }}
+                {% if redirect_field_value %}
+                 <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                 {% endif %}
+                 <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+                 <button class="primaryAction" type="submit">{% trans "Sign In" %}</button>
+</form>
+
               </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -72,8 +69,6 @@
       </div>
     </div>
 
-
->>>>>>> c48af2a984e5c8b34e2fee1318cd9cfd8326d18e
 {% block content %}
 {% endblock %}
 </body>
