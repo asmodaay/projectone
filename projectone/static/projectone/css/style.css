@@ -1,6 +1,6 @@
 
 .logo{
-	width: 1300px;
+	width: 130px;
 	height: 65px;
 }
 
@@ -56,8 +56,8 @@ article{
 }
 
 img {
-	width: 400px;
-  	height: 400px;
+	width: auto;
+  	height: 100%;
 }
 
 .static-item
