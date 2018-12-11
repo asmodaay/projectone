@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Reviev</title>
+  <title>Review</title>
   <meta charset="utf-8">
   
   <script type="123" src="/static/projectone/js/bootstrap.js"></script>
@@ -21,21 +21,21 @@
       </div>
       <div class="col-4">
         <nav class="nav nav-pills flex-column flex-sm-row">
-          <a class="flex-sm-fill text-sm-center" href="/posts_list">Posts list</a>
-          <a class="flex-sm-fill text-sm-center" href="#">XXX</a>
-          <a class="flex-sm-fill text-sm-center" href="base">base</a>
+          <a class="nav-header flex-sm-fill text-sm-center" href="#">Home</a>
+          <a class="nav-header flex-sm-fill text-sm-center" href="#">home</a>
+          <a class="nav-header flex-sm-fill text-sm-center" href="#">home</a>
+          <a href="accounts/login" class="btn-sm nav-header flex-sm-fill text-sm-center btn btn-primary">Login</a>
+          <a href="accounts/logout" class="btn-sm nav-header flex-sm-fill text-sm-center btn btn-primary">Logout</a>
           {% if user.is_authenticated %}
-          <a class="flex-sm-fill text-sm-center" href="{% url 'post_new' %}">new post </a>
+          <a class="btn-sm nav-header flex-sm-fill text-sm-center btn btn-primary" href="{% url 'post_new' %}">new post</a>
           {% endif %}
-          </nav>
+        </nav>
       </div>
     </div>
     <div>
     </div>  
   </header>
 <div class="wrapper container">
-<a href="/accounts/login/"> Login </a>
-<a href="/accounts/signup/"> signup </a>
 {% if user.is_authenticated %}
           <a  href="accounts/logout/">Logout </a>
           {% endif %}
