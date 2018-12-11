@@ -1,11 +1,14 @@
-
 .logo{
 	width: 130px;
 	height: 65px;
 }
 
+nav {
+	padding-top: 25px;
+}
+
 .wrapper {
-	padding-top: 50px;
+	padding-top: 25px;
 	width: 1080px;
 }
 
@@ -18,7 +21,6 @@
 }
 
 header {
-	padding-top: 50px;
 	width: 1080px;
 	height: 100px;
 }
@@ -38,21 +40,6 @@ article{
 .text-slider{
 	width: 400px;
 	height: auto;
-
-}
-
-.layer-front {
-	padding-top: 40px;
-	width: 320px;
-	height: 0;
-	z-index: 1;
-	position: relative;
-	text-align: center;
-}
-
-.layer-end{
-	z-index: 0;
-	position: relative;
 }
 
 img {
