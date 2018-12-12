@@ -1,9 +1,28 @@
   {% extends 'base.html' %}
   {% block content %}
-  <div class="wrapper container">
-    <article class="container">
-        <section id="carouselExampleControls" class="layer1 carousel slide" data-ride="carousel">
-          <div class="carousel-inner">
+  <section class="title-site">
+    <h1 class="ts">Review - это то место, где вы можете поделиться своим мнением о музыке, которая вам нравится, найти новых друзей и весело провести время</h1>
+  </section>
+  <div class="wrapper">
+    <section>
+      <article>
+        <div class="row align-items-center">
+          <div class="col border-desc">
+            <h2 class="tt">Одна из трех колонок</h2>
+          </div>
+          <div class="col border-desc">
+            <h2 class="tt">Одна из трех колонок</h2>
+          </div>
+          <div class="col border-desc">
+            <h2 class="tt">Одна из трех колонок</h2>
+          </div>
+          <div class="col border-desc">
+            <h2 class="tt">Одна из трех колонок</h2>
+          </div>
+        </div>
+      </article>
+      <article id="carouselExampleControls" class="layer1 carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
             <div class="carousel-item active">
               <div class="container"> 
                 <div class="row justify-content-between">
@@ -41,7 +60,7 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>
-        </section>
-    </article>
+      </article>
+    </section>
   </div>
   {% endblock %}
