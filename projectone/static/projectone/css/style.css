@@ -1,6 +1,6 @@
 
 body {
-
+	background-image: url('/static/projectone/images/back.png');
 }
 
 .logo{
@@ -10,12 +10,53 @@ body {
 
 nav {
 	padding-top: 25px;
+	display: inline-block;
+}
+
+.colabs{
+	position: absolute;
+	right: 0;
+	margin-right: 15px;
+	padding-top: 40px;
+}
+
+.header1{
+	margin-right: auto;
+	margin-left: auto;
+	width: 80%;
 }
 
 
+.title-site {
+	padding-top: 50px;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.layer1{
+	padding-top: 50px;
+}
+
+.tt{
+	font-size: 15px;
+}
+
+.ts {
+	font-size: 25px;
+}
+
+.border-desc{
+	background-color: #C8AFEA;
+	height: 200px;
+}
+
 .wrapper {
-	padding-top: 25px;
-	width: 1080px;
+	margin-top: 50px;
+	height: auto;
+	margin-right: auto;
+	margin-left: auto;
+	width: 80%;
 }
 
 .btn1 {
@@ -26,21 +67,11 @@ nav {
   line-height: 1.2;
 }
 
-header {
-	width: 1080px;
-	height: 100px;
-}
-
 a {
   font-size: 15px;
   text-transform: uppercase;
   line-height: 1.2;
   color: black;
-}
-
-article{
-	width: 1080px;
-	height: auto;
 }
 
 .text-slider{

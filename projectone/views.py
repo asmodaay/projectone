@@ -46,3 +46,6 @@ def post_edit(request, pk):
         form = PostForm(instance=post)
     return render(request, 'projectone/post_edit.html', {'form': form})
 
+def vision(request):
+    visuals = Visual.objects.order_by('index').all()
+    return render_to_response('index.html', {'visuals': visuals})
