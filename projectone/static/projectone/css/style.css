@@ -3,6 +3,12 @@ body {
 	background-image: url('/static/projectone/images/back.png');
 }
 
+.post {
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
 .logo{
 	width: 130px;
 	height: 65px;
@@ -49,6 +55,27 @@ nav {
 .border-desc{
 	background-color: #C8AFEA;
 	height: 200px;
+}
+
+.sidebar {
+	height: 200px;
+	border-right: 2px solid #DF8EE4;
+}
+
+.form-huerm {
+	display: flex;
+	border-right: 2px solid #DF8EE4;
+	border-left: 2px solid #DF8EE4;
+	padding: 10px;
+	height: auto;
+	background-color: #DABAF1;
+}
+
+.field-huield {
+	height: auto;
+	margin-right: auto;
+	margin-left: auto;
+	width: 80%;
 }
 
 .wrapper {
