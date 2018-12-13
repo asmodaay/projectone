@@ -24,34 +24,24 @@
       </article>
          <article id="carouselExampleControls" class="layer1 carousel slide" data-ride="carousel">
         <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="container"> 
-                <div class="row justify-content-between">
-                  <div class="col-4">
-                    <img src="/static/projectone/images/img1png.png" alt="First slide">
-                  </div>
-                  <div class="col-4 text-slider border border-dark">
-                    <h1 class="desc">название</h1>
-                    <h1 class="desc">жанр</h1>
-                    <h1 class="desc">страна</h1>
-                    <h1 class="desc">год выпуска</h1>
-                    <h1 class="desc">описание</h1>
+            {% for visual in visuals %}
+            <div class="item{% ifequal visual.index 0 %} active{% endifequal %}" style="background-color:#000;">
+              <div class="container">
+              <div class="row justify-content-between">
+                <div class="col-4">
+            <img  src="/static/projectone/images/"{{ visual.img }} alt="{{ visual.alt }}">
+            </div>
+            <div class="col-4 text-slider border border-dark">
+              <h3> {{ visual.title }}</h3>
+             <p> {{ visual.body }}</p>
+            </div>
+            
                   </div>
                 </div>
               </div>
             </div>
-           <div class="carousel-item">
-              <div class="container"> 
-                <div class="row justify-content-between">
-                  <div class="col-4">
-                    <img src="https://image.freepik.com/free-icon/no-translate-detected_318-1943.jpg" alt="First slide">
-                  </div>
-                  <div class="col-4 text-slider border border-dark">
-                    <h1 class="desc">что-то типа описания</h1>
-                  </div>
-                </div>
-              </div>
-            </div>
+           {% endfor %}
+         </article>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -62,7 +52,7 @@
             <span class="sr-only">Next</span>
           </a>
       </article>
-         
+
     </section>
   </div>
-  {% endblock %}
+ {% endblock %}
