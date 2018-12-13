@@ -26,14 +26,9 @@
           {% if user.is_anonymous %}
           <a href="/accounts/login" class="btn-sm nav-header flex-sm-fill text-sm-center btn btn1 btn-primary" data-toggle="modal" data-target="#login">Login</a>
           <a href="/accounts/signup" class="btn-sm nav-header flex-sm-fill text-sm-center btn1 btn btn-primary">SignUp</a>
-
           {% endif %}
           {% if user.is_authenticated %}
-<<<<<<< HEAD
           <a href="accounts/logout" class="btn-sm nav-header flex-sm-fill text-sm-center btn1 btn btn-primary" data-toggle="modal" data-target="#logout">Logout</a>
-=======
-          <a href="/accounts/logout" class="btn-sm nav-header flex-sm-fill text-sm-center btn1 btn btn-primary">Logout</a>
->>>>>>> a43e73a4204be2b6989614099afc8e18939303b1
           <a class="btn-sm nav-header flex-sm-fill text-sm-center btn1 btn btn-primary" href="{% url 'post_new' %}">new post</a>
           {% endif %}
         </nav>
