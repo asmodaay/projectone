@@ -19,14 +19,14 @@ nav {
 	display: inline-block;
 }
 
-.colabs{
+.colabs {
 	position: absolute;
 	right: 0;
 	margin-right: 15px;
 	padding-top: 40px;
 }
 
-.header1{
+.header1 {
 	margin-right: auto;
 	margin-left: auto;
 	width: 80%;
@@ -72,8 +72,20 @@ nav {
 	background-color: #DABAF1;
 }
 
+div.wrapper-list{
+	background-color: #000;
+}
+
 .field-huield {
 	height: auto;
+	width: 80%;
+}
+
+.wrapper-list {
+	margin-top: 50px;
+	height: auto;
+	margin-right: auto;
+	margin-left: auto;
 	width: 80%;
 }
 
