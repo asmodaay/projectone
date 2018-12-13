@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
   	{% for post in posts %}
-	    <div сlass="wrapper-list">
-			<p>published: {{ post.published_date }}</p>
+	    <div class="wrapper-list">
+	    	<p>published: {{ post.published_date }}</p>
 			<h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
 			<p> Author : {{ post.author }}</p>
-			<p>{{ post.text|linebreaksbr }}</p>       
+			<p>{{ post.text|linebreaksbr }}</p>  
 	    </div>
 	{% endfor %}
 {% endblock %}
