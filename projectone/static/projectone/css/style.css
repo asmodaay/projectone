@@ -53,6 +53,8 @@ nav {
 }
 
 .border-desc{
+	margin-right: 5px;
+	border-radius: 10px;
 	background-color: #C8AFEA;
 	height: 200px;
 }
@@ -63,9 +65,8 @@ nav {
 }
 
 .form-huerm {
-	display: flex;
-	border-right: 2px solid #DF8EE4;
-	border-left: 2px solid #DF8EE4;
+	width: 50%;
+	border-radius: 15px;
 	padding: 10px;
 	height: auto;
 	background-color: #DABAF1;
@@ -73,8 +74,6 @@ nav {
 
 .field-huield {
 	height: auto;
-	margin-right: auto;
-	margin-left: auto;
 	width: 80%;
 }
 
@@ -87,6 +86,7 @@ nav {
 }
 
 .btn1 {
+	border-radius: 10px;
 	padding: 0px;
 	margin-right: 10px;
   font-size: 15px;
