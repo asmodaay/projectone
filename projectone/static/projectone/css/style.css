@@ -45,6 +45,7 @@ nav {
 
 .layer1{
 	padding-top: 50px;
+	display: flex;
 }
 
 .tt{
@@ -105,6 +106,12 @@ nav {
 	margin-right: auto;
 	margin-left: auto;
 	width: 80%;
+}
+
+.btn2{
+	background-color: #B0AFEA;
+	border: 1px solid #B0AFEA;
+	color: black;
 }
 
 .btn1 {
