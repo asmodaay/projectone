@@ -14,12 +14,6 @@
           <div class="col border-desc">
             <h2 class="tt">Одна из трех колонок</h2>
           </div>
-          <div class="col border-desc">
-            <h2 class="tt">Одна из трех колонок</h2>
-          </div>
-          <div class="col border-desc">
-            <h2 class="tt">Одна из трех колонок</h2>
-          </div>
         </div>
       </article>
       <article id="carouselExampleIndicators" class="layer1 carousel slide" data-ride="carousel">
@@ -36,7 +30,7 @@
                     <h3 class="text-post"> {{ album.artist_name }}</h3>
                     <h4 class="text-post"> {{ album.album_name }}</h4>
                     <p class="text-post"> {{ album.release_date }}</p>
-                    <div data-spy="scroll"> {{ album.description }}</div>
+                    <div class="text"> <p> {{ album.description }} </p></div>
                   </div> 
                 </div>
             </div>
