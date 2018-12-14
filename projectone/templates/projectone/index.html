@@ -32,11 +32,11 @@
                   <div class="col-4">
                     <img src="/static/projectone/images/{{ album.img }}" alt="{{ album.alt }}">    
                   </div>
-                  <div class="col-4 text-slider border border-dark">
-                    <h2> {{ album.artist_name }}</h2>
-                    <h3> {{ album.album_name }}</h3>
-                    <p> {{ album.release_date }}</p>
-                    <p> {{ album.description }}</p>
+                  <div class="col-4 text-slider">
+                    <h3 class="text-post"> {{ album.artist_name }}</h3>
+                    <h4 class="text-post"> {{ album.album_name }}</h4>
+                    <p class="text-post"> {{ album.release_date }}</p>
+                    <div data-spy="scroll"> {{ album.description }}</div>
                   </div> 
                 </div>
             </div>
