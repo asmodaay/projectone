@@ -101,6 +101,10 @@ nav {
 	border-radius: 10px;
 }
 
+.text {
+	height: 150px;
+}
+
 .wrapper {
 	margin-top: 50px;
 	height: auto;
