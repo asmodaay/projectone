@@ -19,15 +19,14 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
-class Visual(models.Model):
-    class Meta:
-        db_table = 'app_ideator_visuals'
-
+class Album(models.Model):
+    
     img = models.CharField(max_length=120, verbose_name='Файл картинки')
-    title = models.CharField(max_length=120, verbose_name='Заголовок')
-    body = models.TextField(verbose_name='Описание')
-    alt = models.TextField(verbose_name='Подсказка')
+    artist_name = models.CharField(max_length=120, verbose_name='Имя исполнителя')
+    album_name = models.CharField(max_length=120, verbose_name='Название альбома')
+    release_date = models.DateTimeField(blank=True, null=True, verbose_name='Дата публикации')
+    description = models.TextField(verbose_name='Описание')
     index = models.IntegerField(verbose_name='Индекс')
-
+    alt = str(artist_name) + "  " + str(album_name)
     def __unicode__(self):
         return self.title

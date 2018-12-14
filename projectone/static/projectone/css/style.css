@@ -1,3 +1,6 @@
+.wk_comment{
+	background-color: black; 
+}
 
 body {
 	background-image: url('/static/projectone/images/back.png');

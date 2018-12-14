@@ -22,36 +22,42 @@
           </div>
         </div>
       </article>
-         <article id="carouselExampleControls" class="layer1 carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-            {% for visual in visuals %}
-            <div class="item{% ifequal visual.index 0 %} active{% endifequal %}" style="background-color:#000;">
-              <div class="container">
-              <div class="row justify-content-between">
-                <div class="col-4">
-            <img  src="/static/projectone/images/"{{ visual.img }} alt="{{ visual.alt }}">
-            </div>
-            <div class="col-4 text-slider border border-dark">
-              <h3> {{ visual.title }}</h3>
-             <p> {{ visual.body }}</p>
-            </div>
-            
+      <article id="carouselExampleIndicators" class="layer1 carousel slide" data-ride="carousel">
+         
+          <div class="carousel-inner">
+            {% for album in albums %}
+            <div class="carousel-item{% ifequal album.index 0 %} active{% endifequal %}">
+                <div class="container"> 
+                <div class="row justify-content-between">
+                  <div class="col-4">
+                    <img src="/static/projectone/images/{{ album.img }}" alt="{{ album.alt }}">    
                   </div>
+                  <div class="col-4 text-slider border border-dark">
+                    <h2> {{ album.artist_name }}</h2>
+                    <h3> {{ album.album_name }}</h3>
+                    <p> {{ album.release_date }}</p>
+                    <p> {{ album.description }}</p>
+                  </div> 
                 </div>
-              </div>
             </div>
-           {% endfor %}
-         </article>
           </div>
-          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+
+             {% endfor %}
+            
+            </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
           </a>
-          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>
-      </article>
+
+    </article>
+    
+        
+
 
     </section>
   </div>

@@ -2,11 +2,12 @@ from django.shortcuts import render, get_object_or_404,redirect
 from django.utils import timezone
 from .models import Post
 from .forms import PostForm
-
+from .models import Album
 
 
 def index(request):
-    return render(request, 'projectone/index.html', {})
+    albums = Album.objects.order_by('index').all()
+    return render(request, 'projectone/index.html', {'albums': albums})
 
 def posts_list(request):
 	posts = Post.objects.all()
@@ -46,6 +47,3 @@ def post_edit(request, pk):
         form = PostForm(instance=post)
     return render(request, 'projectone/post_edit.html', {'form': form})
 
-def vision(request):
-    visuals = Visual.objects.order_by('index').all()
-    return render_to_response('index.html', {'visuals': visuals})
