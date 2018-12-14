@@ -21,29 +21,28 @@
         <a class="log" href="/" ><img class="logo" src="/static/projectone/images/review.png"> </a>
       </div>
       <div class="col-6">
-        <nav class="nav nav-pills flex-column flex-sm-row">
-          <a class="nav-header flex-sm-fill text-sm-center" href="/posts_list">Post list</a>
-          <a class="nav-header flex-sm-fill text-sm-center" href="/">home</a>
+        <nav class="navbar nav nav-pills flex-column flex-sm-row">
+          <a class="a nav-header flex-sm-fill text-sm-center" href="/posts_list">Post list</a>
+          <a class="a nav-header flex-sm-fill text-sm-center" href="/">home</a>
           {% if user.is_anonymous %}
-          <a href="/accounts/login" class="btn-sm nav-header flex-sm-fill text-sm-center btn btn1 btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Login</a>
-          <a href="/accounts/signup" class="btn-sm nav-header flex-sm-fill text-sm-center btn1 btn btn-primary">SignUp</a>
-
+          <a href="/accounts/login" class="a btn-sm nav-header flex-sm-fill text-sm-center btn btn1 btn-primary" data-toggle="modal" data-target="#login">Login</a>
+          <a href="/accounts/signup" class="a btn-sm nav-header flex-sm-fill text-sm-center btn1 btn btn-primary">SignUp</a>
           {% endif %}
           {% if user.is_authenticated %}
-          <a href="/accounts/logout" class="btn-sm nav-header flex-sm-fill text-sm-center btn1 btn btn-primary">Logout</a>
-          <a class="btn-sm nav-header flex-sm-fill text-sm-center btn1 btn btn-primary" href="{% url 'post_new' %}">new post</a>
+          <a href="accounts/logout" class="a btn-sm nav-header flex-sm-fill text-sm-center btn1 btn btn-primary" data-toggle="modal" data-target="#logout">Logout</a>
+          <a class="a btn-sm nav-header flex-sm-fill text-sm-center btn1 btn btn-primary" href="{% url 'post_new' %}">new post</a>
           {% endif %}
         </nav>
       </div>
       <div class="col">
         <div class="colabs">
-        <a href="/">Conctacts</a>
+        <a class="edit" href="/">Conctacts</a>
         </div>
       </div>
     </div>
   </header>
 
-   <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+   <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
        <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -65,19 +64,42 @@
                     <input type="password" name="password" class="form-control" id="id_password" placeholder="Password">
                   </div>
                   <div class="form-group form-check">
-                    <label for="id_remember" class="form-check-label" for="Check">Check me out</label>
-                    <input type="checkbox" name ="remember" class="form-check-input" id="id_remember">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
                   </div>
-                  <a class="button secondaryAction" href="{% url 'account_reset_password' %}">Забыли пароль?</a>
-                  <button type="submit" class="btn btn-primary">Go </button>
+                  <div class="modal-footer">
+                    <a class="button secondaryAction" href="{% url 'account_reset_password' %}">Забыли пароль?</a>
+                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                     <button type="submit" class="btn btn-primary">Go </button>
+                  </div>
                 </form>
-              </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div> 
           </div>
         </div>
       </div>
-    </div>
+
+      <div class="modal fade" id="logout" tabindex="-1" role="dialog" aria-labelledby="logout" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Logout</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form method="post" action="{% url 'account_logout' %}">
+                {% csrf_token %}
+                <div class="form-group">
+                  <p>Are you sure you want to quit?<br></p>
+                  <button type="submit" class="btn btn-primary">Yes</button>
+                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
 
