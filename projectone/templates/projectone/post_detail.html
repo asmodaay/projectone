@@ -1,16 +1,21 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="post">
-        {% if post.published_date %}
-            <div class="date">
-                {{ post.published_date }}
+    <div class="wrapper">
+        <div class="wrapper-list">
+            {% if user.is_authenticated %}
+            <a href="{% url 'post_edit' pk=post.pk %}">EDIT POST(она должна быть красивой)</a>
+            {% endif %}
+            <div class="wrapper-list-content">
+                <p class="title-post">Title: {{ post.title }}</p>
+                <p class="text-post">Text: {{ post.text|linebreaksbr }}</p>
             </div>
-        {% endif %}
-        {% if user.is_authenticated %}
-        <a href="{% url 'post_edit' pk=post.pk %}"> Изменить</a>
-        {% endif %}
-        <h1>{{ post.title }}</h1>
-        <p>{{ post.text|linebreaksbr }}</p>
+            {% if post.published_date %}
+           
+                {{ post.published_date }}
+            
+            {% endif %}
+        </div>
     </div>
+
 {% endblock %}
