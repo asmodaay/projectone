@@ -25,11 +25,23 @@ nav {
 }
 
 .header1 {
+	background-color: #DABAF1;
+	border: 2px solid  #A0AFEA;
+	border-radius: 10px;
 	margin-right: auto;
 	margin-left: auto;
 	width: 80%;
 }
 
+.footer1 {
+	background-color: #DABAF1;
+	border: 2px solid  #A0AFEA;
+	border-radius: 10px;
+	margin-top: 50px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 80%;
+}
 
 .title-site {
 	padding-top: 50px;
