@@ -131,11 +131,14 @@ nav {
 	text-transform: uppercase;
 }
 
+
+
 .text-slider{
 	padding: 10px;
 	width: 400px;
 	height: auto;
 	background-color: #C8AFEA;
+	border: 2px solid  #A0AFEA;
 	border-radius: 10px;
 }
 
