@@ -25,11 +25,20 @@ nav {
 }
 
 .header1 {
+
+	border-radius: 10px;
 	margin-right: auto;
 	margin-left: auto;
 	width: 80%;
 }
 
+.footer1 {
+	border-radius: 10px;
+	margin-top: 50px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 80%;
+}
 
 .title-site {
 	padding-top: 50px;
@@ -131,11 +140,14 @@ nav {
 	text-transform: uppercase;
 }
 
+
+
 .text-slider{
 	padding: 10px;
 	width: 400px;
 	height: auto;
 	background-color: #C8AFEA;
+	border: 2px solid  #A0AFEA;
 	border-radius: 10px;
 }
 
