@@ -30,3 +30,5 @@ class Album(models.Model):
     alt = str(artist_name) + "  " + str(album_name)
     def __unicode__(self):
         return self.title
+
+
